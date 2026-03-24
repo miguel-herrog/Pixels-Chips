@@ -3,6 +3,7 @@
 *.iml
 out/
 target/
+bin/
 
 
 # OS generated files
