@@ -4,8 +4,4 @@ out/
 *.jar
 .idea/
 Pixels-Chips.iml
-release/
-
-# OS generated files
-.DS_Store
-Thumbs.db
+/release/
