@@ -1,8 +1,8 @@
 package core;
 
 import entities.*;
+import entities.rayman.*;
 import entities.residentevil.*;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,6 +14,7 @@ public class TableManager {
         while (inSagas) {
             System.out.println("\n" + ConsoleColors.CYAN + "=== SELECT A FRANCHISE ===" + ConsoleColors.RESET);
             System.out.println("1. Resident Evil");
+            System.out.println("2. Rayman");
             System.out.println("0. Back to Main Menu");
             System.out.print("\nChoose an option > ");
 
@@ -22,6 +23,9 @@ public class TableManager {
             switch (input) {
                 case "1":
                     showResidentEvilTables(scanner, player, engine);
+                    break;
+                case "2":
+                    showRaymanTables(scanner, player, engine);
                     break;
                 case "0":
                     inSagas = false;
@@ -57,6 +61,35 @@ public class TableManager {
                 if (player.getChips() <= 0) {
                     inRE = false;
                 }
+            } else {
+                System.out.println(ConsoleColors.RED + "Invalid table." + ConsoleColors.RESET);
+            }
+        }
+    }
+
+    private static void showRaymanTables(Scanner scanner, Player player, GameEngine engine) {
+        boolean inRayman = true;
+
+        while (inRayman && player.getChips() > 0) {
+            System.out.println("\n" + ConsoleColors.YELLOW_BOLD + "=== RAYMAN TABLES ===" + ConsoleColors.RESET);
+            System.out.println("1. The Glade of Dreams (Rayman vs Globox vs Mr. Dark)");
+            System.out.println("0. Go Back");
+            System.out.print("\nChoose a table > ");
+
+            String input = scanner.nextLine().trim();
+
+            if (input.equals("1")) {
+                System.out.println(ConsoleColors.GREEN + "\n[ Sitting at The Glade of Dreams table... ]" + ConsoleColors.RESET);
+
+                ArrayList<Boss> gladeOfDreamsNPCs = new ArrayList<>();
+                gladeOfDreamsNPCs.add(new Rayman());
+                gladeOfDreamsNPCs.add(new Globox());
+                gladeOfDreamsNPCs.add(new MrDark());
+
+                engine.startTable(player, gladeOfDreamsNPCs);
+
+            } else if (input.equals("0")) {
+                inRayman = false;
             } else {
                 System.out.println(ConsoleColors.RED + "Invalid table." + ConsoleColors.RESET);
             }
