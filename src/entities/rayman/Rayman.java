@@ -46,7 +46,6 @@ public class Rayman extends Boss {
     public String getBankruptDialogue() {
         return getRandomLine(
                 "Rayman: \"Well, it was fun while it lasted. I'm gonna go before I bet my torso again.\"",
-                "Rayman: \"Augh, I'm gonna have sex with Ly ou yeah!\"",
                 "Rayman: \"I'm outta lums pals. See you around.\""
         );
     }
@@ -56,7 +55,6 @@ public class Rayman extends Boss {
         if (target.getName().equals("Globox")) {
             return getRandomLine(
                     "Rayman: \"You do have a habit of biting more than you can chew.\"",
-                    "Rayman: \"Joder ostias globox maricon puto pringui\"",
                     "Rayman: \"Maybe less plum juice next time, big guy?\""
             );
         } else if (target.getName().equals("Razorbeard")) {
