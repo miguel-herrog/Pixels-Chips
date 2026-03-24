@@ -58,11 +58,15 @@ public class Player {
             String topRank = r.length() == 1 ? r + " " : r;
             String botRank = r.length() == 1 ? " " + r : r;
 
-            line1.append("┌───────┐ ");
-            line2.append("│ ").append(topRank).append("    │ ");
-            line3.append("│   ").append(s).append("   │ ");
-            line4.append("│    ").append(botRank).append(" │ ");
-            line5.append("└───────┘ ");
+            String color = (s.equals("♥") || s.equals("♦") || s.equals("H") || s.equals("D"))
+                    ? core.ConsoleColors.RED_BOLD : core.ConsoleColors.WHITE_BOLD;
+            String reset = core.ConsoleColors.RESET;
+
+            line1.append(color).append("┌───────┐ ").append(reset);
+            line2.append(color).append("│ ").append(topRank).append("    │ ").append(reset);
+            line3.append(color).append("│   ").append(s).append("   │ ").append(reset);
+            line4.append(color).append("│    ").append(botRank).append(" │ ").append(reset);
+            line5.append(color).append("└───────┘ ").append(reset);
         }
 
         System.out.println(line1);
@@ -70,7 +74,7 @@ public class Player {
         System.out.println(line3);
         System.out.println(line4);
         System.out.println(line5);
-        DisplayManager.type("Current Score: " + calculateScore(), 10);
+        DisplayManager.type(core.ConsoleColors.CYAN + "Current Score: " + calculateScore() + core.ConsoleColors.RESET, 10);
         System.out.println("-------------------");
     }
 
@@ -88,17 +92,22 @@ public class Player {
         String topRank = r.length() == 1 ? r + " " : r;
         String botRank = r.length() == 1 ? " " + r : r;
 
-        line1.append("┌───────┐ ");
-        line2.append("│ ").append(topRank).append("    │ ");
-        line3.append("│   ").append(s).append("   │ ");
-        line4.append("│    ").append(botRank).append(" │ ");
-        line5.append("└───────┘ ");
+        String color = (s.equals("♥") || s.equals("♦") || s.equals("H") || s.equals("D"))
+                ? core.ConsoleColors.RED_BOLD : core.ConsoleColors.WHITE_BOLD;
+        String reset = core.ConsoleColors.RESET;
 
-        line1.append("┌───────┐ ");
-        line2.append("│ ░░░░░ │ ");
-        line3.append("│ ░ ? ░ │ ");
-        line4.append("│ ░░░░░ │ ");
-        line5.append("└───────┘ ");
+        line1.append(color).append("┌───────┐ ").append(reset);
+        line2.append(color).append("│ ").append(topRank).append("    │ ").append(reset);
+        line3.append(color).append("│   ").append(s).append("   │ ").append(reset);
+        line4.append(color).append("│    ").append(botRank).append(" │ ").append(reset);
+        line5.append(color).append("└───────┘ ").append(reset);
+
+        String hiddenColor = core.ConsoleColors.YELLOW;
+        line1.append(hiddenColor).append("┌───────┐ ").append(reset);
+        line2.append(hiddenColor).append("│ ░░░░░ │ ").append(reset);
+        line3.append(hiddenColor).append("│ ░ ? ░ │ ").append(reset);
+        line4.append(hiddenColor).append("│ ░░░░░ │ ").append(reset);
+        line5.append(hiddenColor).append("└───────┘ ").append(reset);
 
         System.out.println(line1);
         System.out.println(line2);
