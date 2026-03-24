@@ -37,7 +37,7 @@ public class TableManager {
 
         while (inRE) {
             System.out.println("\n" + ConsoleColors.RED_BOLD + "=== RESIDENT EVIL TABLES ===" + ConsoleColors.RESET);
-            System.out.println("1. The Spencer Mansion (Albert Wesker vs Chris Redfield)");
+            System.out.println("1. The Spencer Mansion (Albert Wesker vs Chris Redfield vs Jill Valentine)");
             System.out.println("0. Go Back");
             System.out.print("\nChoose a table > ");
 
