@@ -54,7 +54,7 @@ public class Globox extends Boss {
 
     @Override
     public String reactToOtherBust(Player target) {
-        if (target.getName().equals("Mr. Dark")) {
+        if (target.getName().equals("Razorbeard")) {
             return getRandomLine(
                     "Globox: \"Haha! The scary man lost!\"",
                     "Globox: \"Take that, meanie!\""

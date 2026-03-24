@@ -72,7 +72,7 @@ public class TableManager {
 
         while (inRayman && player.getChips() > 0) {
             System.out.println("\n" + ConsoleColors.YELLOW_BOLD + "=== RAYMAN TABLES ===" + ConsoleColors.RESET);
-            System.out.println("1. The Glade of Dreams (Rayman vs Globox vs Mr. Dark)");
+            System.out.println("1. The Glade of Dreams (Rayman vs Globox vs Razorbeard)");
             System.out.println("0. Go Back");
             System.out.print("\nChoose a table > ");
 
@@ -84,7 +84,7 @@ public class TableManager {
                 ArrayList<Boss> gladeOfDreamsNPCs = new ArrayList<>();
                 gladeOfDreamsNPCs.add(new Rayman());
                 gladeOfDreamsNPCs.add(new Globox());
-                gladeOfDreamsNPCs.add(new MrDark());
+                gladeOfDreamsNPCs.add(new Razorbeard());
 
                 engine.startTable(player, gladeOfDreamsNPCs);
 

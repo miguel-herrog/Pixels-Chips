@@ -19,35 +19,35 @@ public class Rayman extends Boss {
     public String getBustDialogue() {
         return getRandomLine(
                 "Rayman: \"Whoops! My hands slipped... literally!\"",
-                "Rayman: \"Yeah... I pushed that too far.\"",
-                "Rayman: \"Need to keep my head attached to my shoulders!\""
+                "Rayman: \"That's a lotta math to just end up broke.\"",
+                "Rayman: \"I think this card's a dud. Any chance I can switch it out?\""
         );
     }
 
     @Override
     public String getWinDialogue() {
         return getRandomLine(
-                "Rayman: \"YEAH! No limbs, no problem!\"",
-                "Rayman: \"That's how we do it in the Glade of Dreams!\"",
-                "Rayman: \"Magic fist bumps for everyone!\""
+                "Rayman: \"And for my next trick, I'll make all of your chips disappear… Ta-da!\"",
+                "Rayman: \"No offense, but these chips look happier next to me.\"",
+                "Rayman: \"I win! And you know I didn't cheat cause I don't have any sleeves.\""
         );
     }
 
     @Override
     public String getLossDialogue() {
         return getRandomLine(
-                "Rayman: \"Ouch. That one hurt.\"",
-                "Rayman: \"Not my best jump.\"",
-                "Rayman: \"I'll bounce back!\""
+                "Rayman: \"Oh, I lost my hand! Oh, wait, there it is. Oh, I lost my chips!\"",
+                "Rayman: \"You know, I'm starting to notice a trend when it comes to loosing my hands.\"",
+                "Rayman: \"Goodbye chips, gone but not forgotten!\""
         );
     }
 
     @Override
     public String getBankruptDialogue() {
         return getRandomLine(
-                "Rayman: \"Game over for me! See ya!\" (Helicopter hair flies away)",
-                "Rayman: \"Out of continues! Good luck, guys!\"",
-                "Rayman: \"I'm completely broke... Time to collect more Lums.\""
+                "Rayman: \"Well, it was fun while it lasted. I'm gonna go before I bet my torso again.\"",
+                "Rayman: \"Augh, I'm gonna have sex with Ly ou yeah!\"",
+                "Rayman: \"I'm outta lums pals. See you around.\""
         );
     }
 
@@ -55,14 +55,15 @@ public class Rayman extends Boss {
     public String reactToOtherBust(Player target) {
         if (target.getName().equals("Globox")) {
             return getRandomLine(
-                    "Rayman: \"Don't worry buddy, it happens to the best of us!\"",
-                    "Rayman: \"It's okay Globox, just take a deep breath!\"",
+                    "Rayman: \"You do have a habit of biting more than you can chew.\"",
+                    "Rayman: \"Joder ostias globox maricon puto pringui\"",
                     "Rayman: \"Maybe less plum juice next time, big guy?\""
             );
-        } else if (target.getName().equals("Mr. Dark")) {
+        } else if (target.getName().equals("Razorbeard")) {
             return getRandomLine(
-                    "Rayman: \"Ha! Your dark magic can't fix your terrible math!\"",
-                    "Rayman: \"Looks like the shadows clouded your judgment.\""
+                    "Rayman: \"Looks like you came up a little short, Admiral. Story of your life, huh?\"",
+                    "Rayman: \"Wow, that hand went south fast. Reminds me of your ship! Remember the 'kaboom' part? Classic.\"",
+                    "Rayman: \"Eyes on the cards, sir... or eye. However many you can direct to the table.\""
             );
         }
         return getRandomLine(
@@ -76,13 +77,15 @@ public class Rayman extends Boss {
     public String reactToOtherWin(Player target) {
         if (target.getName().equals("Globox")) {
             return getRandomLine(
-                    "Rayman: \"Way to go, Globox! Awesome!\"",
-                    "Rayman: \"High five, buddy! Wait...\""
+                    "Rayman: \"Way to go, buddy!\"",
+                    "Rayman: \"Yeah! I knew you could do it!\"",
+                    "Rayman: \"Alright! Just don't swallow the chips yet.\""
             );
-        } else if (target.getName().equals("Mr. Dark")) {
+        } else if (target.getName().equals("Razorbeard")) {
             return getRandomLine(
-                    "Rayman: \"You definitely cheated.\"",
-                    "Rayman: \"I'm keeping an eye on your sleeves, Dark.\""
+                    "Rayman: \"Careful, don't let the chips stack too high. I wouldn't want you to lose sight of the table.\"",
+                    "Rayman: \"Fine, take those chips, you'll need them. I'm sure the Circus isn't going very well.\"",
+                    "Rayman: \"Nice win, Captain! Which eye was on the deck for that one?\""
             );
         }
         return getRandomLine(
