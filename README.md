@@ -21,10 +21,20 @@ The codebase is organized into logical packages for maximum scalability:
 
 ## 🚀 How to Run
 
-1. Clone this repository to your local machine.
-2. Open your terminal and navigate to the `src` folder.
-3. Compile the project: `javac core/Main.java`
-4. Run the game: `java core.Main`
+This project is a CLI (Command Line Interface) game. To play, follow these steps:
+
+### Prerequisites
+* **Java JDK 23** installed on your system.
+
+### Option 1: Fast Build & Run (Windows)
+Simply run the provided automation script:
+1. Double-click `build.bat` in the root directory.
+2. The script will compile the source code, generate the `.jar` file, and launch the game automatically.
+
+### Option 2: Manual Execution
+If you already have the `MultiverseBlackjack.jar` file:
+1. Open your terminal in the project root.
+2. Run: `java -jar MultiverseBlackjack.jar`
 
 ## 🎮 How to Play
 
