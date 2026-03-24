@@ -5,9 +5,11 @@ import entities.Boss;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean isRunning = true;
+        System.out.println(ArtManager.getArt("BANNER"));
 
         System.out.println(ConsoleColors.CYAN + "=================================================" + ConsoleColors.RESET);
         System.out.println(ConsoleColors.YELLOW_BOLD + " 🎰 WELCOME TO THE PIXELS & CHIPS CASINO 🎰 " + ConsoleColors.RESET);
